@@ -65,6 +65,20 @@ app.post('/login/',(req,res,next)=>{
 
 });
 
+app.get('/list/',(req,res,next)=>{
+	con.query('SELECT * from user',function(err,result,fields){
+		con.on('error',function(err){
+			console.log('mysql error',err);
+		});
+		if(result && result.length){
+			res.json(result);
+		}
+
+	});
+	console.log('hello bro');
+	
+});
+
 app.listen(9999,()=>{
 console.log('Alkesh Restful running on port 9999');
 })

@@ -8,7 +8,7 @@ public class Retrofit_Client {
     private static Retrofit_Client instance;
     private Retrofit retrofit;
     private Retrofit_Client(){
-        retrofit = new Retrofit.Builder().baseUrl("https://10.0.2.2:9999/").
+        retrofit = new Retrofit.Builder().baseUrl("https://8a957f43.ngrok.io/").
                 addConverterFactory(GsonConverterFactory.create()).build();
     }
     public static synchronized  Retrofit_Client getInstance() {
